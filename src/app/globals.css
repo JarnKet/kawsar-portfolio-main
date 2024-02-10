@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fontColor: #8a8a8a
+  --fontHover: #dcdcdc;
+  --backgroundColor: #111111;
+  --primaryColor: #242424;
+}
+
+@layer components {
+  .flexNormal {
+    @apply flex items-center gap-x-6;
+  }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  .textGradient{
+    @apply text-transparent bg-gradient-to-r from-accent to-secondary bg-clip-text;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+  transition: all 100ms ease-in-out;
+}
+
+body {
+  background-color: var(--backgroundColor);
+
+}
+
+.background {
+  background-image: url("../../public/dot.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
